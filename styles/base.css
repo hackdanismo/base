@@ -6,7 +6,14 @@
  * Released under the MIT Licence: https://opensource.org/licenses/MIT
  */
 
-@layer layout, headings, copy, flow;
+@layer font, layout, headings, copy, flow;
+
+@layer font {
+    body {
+        /* Set the default webfont for the page. */
+        font-family: "Darker Grotesque";
+    }
+}
 
 @layer layout { 
     /* 
