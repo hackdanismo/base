@@ -6,7 +6,7 @@
  * Released under the MIT Licence: https://opensource.org/licenses/MIT
  */
 
-@layer layout, flow;
+@layer layout, headings, copy, link, flow;
 
 @layer layout { 
     /* 
@@ -50,6 +50,47 @@
         width: min(100% - 2rem, 1240px);
         /* Center the container horizontally. */
         margin-inline: auto;
+    }
+}
+
+@layer headings {
+    h1, h2, h3, h4, h5, h6 {
+        /* Avoid line breaks when headings break onto multiple lines. */
+        text-wrap: balance;
+        /* Break any long words or unbroken strings so that they do not overflow the parent container. */
+        overflow-wrap: break-word;
+    }
+}
+
+@layer copy {
+    p {
+        /* Display readable, natural-looking text blocks with line breaks. */
+        text-wrap: pretty;
+        /* Break any long words or unbroken strings so that they do not overflow the parent container. */
+        overflow-wrap: break-word;
+    }
+
+    li, figcaption {
+        /* Display readable, natural-looking text blocks with line breaks. */
+        text-wrap: pretty;
+    }
+}
+
+@layer link {
+    /* Add class to hyperlinks to apply styling beyond the default.
+     * Example: <a href="#" class="link"> ... </a>
+     */
+    .link {
+        /* Default underline set for links (not strictly needed, but added anyway). */
+        text-decoration: underline;
+        /* Ensure the default cursor pointer is applied on hover. */
+        cursor: pointer;
+    }
+
+    /* Link hover state. */
+    .link:hover {
+        /* Removes the underline when the user hovers over a link, as default behavior. */
+        text-decoration: none;
     }
 }
 
