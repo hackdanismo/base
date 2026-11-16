@@ -4,17 +4,14 @@
      * Example: <a href="#" class="link"> ... </a>
      */
     .link {
+        position: relative;
+        display: inline-block;
         /* Default underline set for links (not strictly needed, but added anyway). */
-        text-decoration: underline;
+        text-decoration: var(--link-underline, underline);
         /* Ensure the default cursor pointer is applied on hover. */
         cursor: pointer;
-        color: inherit;
-    }
-
-    /* Link hover state. */
-    .link:hover {
-        /* Removes the underline when the user hovers over a link, as default behavior. */
-        text-decoration: none;
+        /* Set the link color, defaults to inherit unless a color value is passed. */
+        color: var(--link-color, inherit);
     }
 
     /* 
@@ -23,23 +20,25 @@
      * Example: <a href="#" class="link link--slide"> ... </a>
      */
     .link--slide {
-        position: relative;
-        display: inline-block;
+        /* Remove the text underline as this will be replaced by psuedo class. */
         text-decoration: none;
-        color: inherit;
     }
 
+    /* Psuedo class that handles the rendering of the sliding underline. */
     .link--slide::after {
         content: "";
         position: absolute;
         left: 0;
-        bottom: 2px;
+        /* Vertical position of the underline relative to the link. */
+        bottom: var(--link-slide-underline-position, 2px);
         width: 100%;
-        height: 1px;
+        /* Set the thickness of the underline. */
+        height: var(--link-slide-underline-thickness, 1px);
         background-color: currentColor;
         transform: scaleX(1);
-        transform-origin: left;
-        transition: transform 0.35s ease;
+        transform-origin: var(--link-slide-origin, left);
+        /* Set the transition. */
+        transition: var(--link-slide-transform, transform 0.35s ease);
     }
 
     .link--slide:hover::after {
