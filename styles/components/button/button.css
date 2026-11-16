@@ -4,13 +4,17 @@
         text-decoration: none;
         text-align: center;
         cursor: pointer;
-    }
-
-    /*
-     * Example: <button type="button" class="button button--pill">Button</button>
-     */
-    .button--pill {
-        /* Create a smooth rounded border to display as a pill-like button. */
-        border-radius: 9999px;
+        /* Transition using value from the theme/default.css file or default to fallback value specified here. */
+        transition: var(--btn-transition, all 0.2s ease);
+        /* Background color using value from the theme/default.css file or default to fallback value specified here. */
+        background-color: var(--btn-bg, #2563eb);
+        /* Text/Label color using value from the theme/default.css file or default to fallback value specified here. */
+        color: var(--btn-color, #fff);
+        /* Border set using value from the theme/default.css file or default to fallback value specified here. */
+        border: var(--btn-border, 0);
+        /* Border Radius set using value from the theme/default.css file or default to fallback value specified here. */
+        border-radius: var(--btn-border-radius, 0);
+        /* Padding using value from the theme/default.css file or default to fallback value specified here. */
+        padding: var(--btn-padding, 0.5rem 1rem);
     }
 }
