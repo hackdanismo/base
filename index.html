@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="styles/theme/default.css">
         <!-- Components -->
         <link rel="stylesheet" href="styles/components/button/button.css">
+        <link rel="stylesheet" href="styles/components/card/card.css">
     </head>
     <body>
         <header>
@@ -36,6 +37,78 @@
                     <button type="button" class="button button--secondary">Button Secondary</button>
                     <button type="button" class="button button--pill">Button Pill</button>
                     <button type="button" class="button button--curved">Button Curved</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Card</h2>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__content">
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                This is a second card.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                This is a third card.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Card</h2>
+
+                    <div class="card-container">
+                        <a href="#" target="_blank" rel="nopener noreferrer">
+                            <div class="card">
+                                <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                                <div class="card__content">
+                                    <div class="flow">
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card">
+                            <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                            <div class="card__content">
+                                <div class="flow">
+                                    This is a second card. <a href="#" target="_blank" rel="noopener noreferrer">Link example</a>.
+                                </div>
+                                <div class="card__cta">
+                                    <a href="#" role="button" class="button button--pill u-full-width">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                            <div class="card__content">
+                                <div class="flow">
+                                    This is a third card.
+                                </div>
+                                <div class="card__cta u-flex-right">
+                                    <a href="#" role="button" class="button button--pill">Read more</a>
+                                    <a href="#" role="button" class="button button--pill">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
