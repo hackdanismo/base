@@ -1,0 +1,16 @@
+@layer list {
+    ul {
+        /* Remove default left padding to align the list. */
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        /* The gap between each list item, default to 0.5rem. */
+        gap: var(--list-item-gap, 0.5rem);
+    }
+
+    /* List bullets. */
+    ul li::marker {
+        /* Set the bullet color of the list item or fallback to inherit the parent. */
+        color: var(--list-bullet-color, inherit);
+    }
+}
