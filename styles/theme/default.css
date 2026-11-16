@@ -87,7 +87,7 @@
 }
 
 @layer list {
-    ul {
+    ul li:not(:last-child) {
         /* Set the vertical space/gap between each list item. */
         --list-item-gap: 0.5rem;
     }
