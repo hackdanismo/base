@@ -59,6 +59,13 @@
     * Select every direct child (*).
     * Remove the margin-bottom from every child element for improved spacing.
     * This allows the parent element to have an equal padding or margin around the whole content.
+    * Example:
+    * <div class="flow">
+    *   <h3>Flow Example</h3>
+    *
+    *   <p>Neque porro quisquam est.</p>
+    *   <p>Neque porro quisquam est.</p>
+    * </div>
     */
     .flow > * {
         margin-bottom: 0;
