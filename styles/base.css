@@ -23,6 +23,14 @@
         padding-block: clamp(1rem, 8vw, 2rem);
     }
 
+    .section:has(+ .section) {
+        /*
+         * Remove bottom padding when another section follows.
+         * Ensures that the padding is not duplicated between sections making the gap larger than specified.
+         */
+        padding-bottom: 0;
+    }
+
     /* 
      * Content container. 
      * Example: <div class="container"> ... </div>
