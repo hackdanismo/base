@@ -1,0 +1,48 @@
+@layer link {
+    /* 
+     * Add class to hyperlinks to apply styling beyond the default.
+     * Example: <a href="#" class="link"> ... </a>
+     */
+    .link {
+        /* Default underline set for links (not strictly needed, but added anyway). */
+        text-decoration: underline;
+        /* Ensure the default cursor pointer is applied on hover. */
+        cursor: pointer;
+        color: inherit;
+    }
+
+    /* Link hover state. */
+    .link:hover {
+        /* Removes the underline when the user hovers over a link, as default behavior. */
+        text-decoration: none;
+    }
+
+    /* 
+     * Create a link with an underline that slides when hover over.
+     * Add class to hyperlinks to apply styling beyond the default.
+     * Example: <a href="#" class="link link--slide"> ... </a>
+     */
+    .link--slide {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .link--slide::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+    }
+
+    .link--slide:hover::after {
+        transform: scaleX(0);
+    }
+}
