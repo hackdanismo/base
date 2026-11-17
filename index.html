@@ -19,8 +19,10 @@
         <link rel="stylesheet" href="styles/components/button/button.css">
         <link rel="stylesheet" href="styles/components/link/link.css">
         <link rel="stylesheet" href="styles/components/list/list.css">
+        <link rel="stylesheet" href="styles/components/modal/modal.css">
 
         <script src="scripts/components/accordion/accordion.js" defer></script>
+        <script src="scripts/components/modal/modal.js" defer></script>
     </head>
     <body>
         <header>
@@ -87,6 +89,51 @@
                     <h2>Image</h2>
 
                     <img loading="lazy" src="https://picsum.photos/200/300" width="200" height="300" alt="Example image.">
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Modal</h2>
+
+                    <button type="button" id="openModal">
+                    Open modal
+                    </button>
+
+                    <dialog id="myModal" aria-labelledby="modalTitle">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h2 id="modalTitle">Modal heading</h2>
+
+                        <button
+                            type="button"
+                            class="close-button"
+                            id="closeModal"
+                            aria-label="Close dialog"
+                        >
+                            &times;
+                        </button>
+                        </div>
+
+                        <p>
+                        This is an HTML5 modal dialog.
+                        Add any content you like here.
+                        </p>
+
+                        <div class="modal-actions">
+                        <form method="dialog">
+                            <button class="button-secondary">
+                            Cancel
+                            </button>
+                        </form>
+
+                        <button type="button" class="button-primary">
+                            Confirm
+                        </button>
+                        </div>
+                    </div>
+                    </dialog>
+
                 </div>
             </section>
 
