@@ -17,12 +17,16 @@
         <!-- Components -->
         <link rel="stylesheet" href="styles/components/accordion/accordion.css">
         <link rel="stylesheet" href="styles/components/button/button.css">
+<<<<<<< HEAD
+        <link rel="stylesheet" href="styles/components/card/card.css">
+=======
         <link rel="stylesheet" href="styles/components/link/link.css">
         <link rel="stylesheet" href="styles/components/list/list.css">
         <link rel="stylesheet" href="styles/components/modal/modal.css">
 
         <script src="scripts/components/accordion/accordion.js" defer></script>
         <script src="scripts/components/modal/modal.js" defer></script>
+>>>>>>> main
     </head>
     <body>
         <header>
@@ -55,6 +59,78 @@
 
                     <a href="#" class="link">Link example</a>
                     <a href="#" class="link link--slide">Slide Underline Link example</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Card</h2>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card__content">
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                                <p>This is a card.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                This is a second card.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__content">
+                                This is a third card.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Card</h2>
+
+                    <div class="card-container">
+                        <a href="#" target="_blank" rel="nopener noreferrer">
+                            <div class="card">
+                                <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                                <div class="card__content">
+                                    <div class="flow">
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                        <p>This is a card.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card">
+                            <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                            <div class="card__content">
+                                <div class="flow">
+                                    This is a second card. <a href="#" target="_blank" rel="noopener noreferrer">Link example</a>.
+                                </div>
+                                <div class="card__cta">
+                                    <a href="#" role="button" class="button button--pill u-full-width">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card__image" src="https://picsum.photos/200" alt="Description of image 1.">
+                            <div class="card__content">
+                                <div class="flow">
+                                    This is a third card.
+                                </div>
+                                <div class="card__cta u-flex-right">
+                                    <a href="#" role="button" class="button button--pill">Read more</a>
+                                    <a href="#" role="button" class="button button--pill">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
