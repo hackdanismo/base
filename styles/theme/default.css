@@ -3,53 +3,7 @@
  * Pass values into components using this theme file and CSS properties.
  * If no values are passed, the component will default to fallback values.
  */
-@layer button, link, list;
-
-@layer button {
-    /* Button default state. */
-    .button {
-        /* Button padding. */
-        --btn-padding: 0.5rem 1rem;
-        /* Button transition on hover. */
-        --btn-transition: all 0.2s ease;
-        /* No border by default on button. */
-        --btn-border: 0;
-    }
-
-    /* Button hover state. */
-    .button:hover {
-        /* Set background color or default to the value specified here. */
-        --btn-bg: var(--btn-hover, #1d4ed8);
-    }
-
-    /*
-     * Example: <button type="button" class="button button--curved">Button</button>
-     */
-    .button--curved {
-        /* Create a smooth rounded border on the button. */
-        --btn-border-radius: 0.5rem;    /* 8px */ 
-    }
-
-    /* Primary button styling. */
-    .button--primary {
-        /* Background color. */
-        --btn-bg: #2563eb;
-        /* Hover background color. */
-        --btn-hover: #1d4ed8;
-        /* Label/Text color. */
-        --btn-color: #fff;
-    }
-
-    /* Secondary button styling. */
-    .button--secondary {
-        /* Background color. */
-        --btn-bg: #e5e7eb;
-        /* Hover background color. */
-        --btn-hover: #d1d5db;
-        /* Label/Text color. */
-        --btn-color: #1f2937;
-    }
-}
+@layer link, list;
 
 @layer link {
     /* Link default state. */

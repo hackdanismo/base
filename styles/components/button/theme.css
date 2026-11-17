@@ -1,0 +1,63 @@
+/*
+ * Theme: Button
+ * Component: styles/components/button/button.css
+ *
+ * Set the button styling within this stylesheet file.
+ * The values get passed into the button component to apply styling.
+ */
+
+@layer button {
+    /* Example: <button type="button" class="button">Button</button> */
+    .button {
+        /* Set vertical and horizontal padding for the default button. */
+        --btn-padding: 0.5rem 1rem;
+        /* Transition is applied on hover. */
+        --btn-transition: all 0.2s ease;
+        /* Remove the border by default. Change this value if a border is needed. */
+        --btn-border: 0;
+    }
+
+    /* 
+     * Primary button styling. 
+     * Example: <button type="button" class="button button--primary">Button</button>
+     */
+    .button--primary {
+        /* Background color. */
+        --btn-bg: #2563eb;
+        /* Hover background color. */
+        --btn-hover: #1d4ed8;
+        /* Label/Text color. */
+        --btn-color: #fff;
+    }
+
+    /* 
+     * Secondary button styling. 
+     * Example: <button type="button" class="button button--secondary">Button</button>
+     */
+    .button--secondary {
+        /* Background color. */
+        --btn-bg: #e5e7eb;
+        /* Hover background color. */
+        --btn-hover: #d1d5db;
+        /* Label/Text color. */
+        --btn-color: #1f2937;
+    }
+
+    /* Button hover state. */
+    .button:hover {
+        /* Set a background color or fallback to the value specified here. */
+        --btn-bg: var(--btn-hover, #1d4ed8);
+    }
+
+    /*
+     * Add a curved/rounded border to the button.
+     * Example: <button type="button" class="button button--curved">Button</button>
+     */
+    .button--curved {
+        /* 
+         * Change the value here if the border radius needs to change.
+         * Create a smooth rounded border on the button. 
+         */
+        --btn-border-radius: 0.5rem;    /* 8px */ 
+    }
+}
