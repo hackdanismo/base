@@ -1,12 +1,4 @@
 /*
- * Example: <div class="full-width"> ... </div>
- */
-.full-width {
-    /* Set the width of the element to be 100%. */
-    width: 100%;
-}
-
-/*
  * Remove bullets from an unordered list.
  * Example: <ul class="no-list-style-type"> ... </ul>
  */

@@ -17,4 +17,9 @@
         /* Padding using value from the theme/default.css file or default to fallback value specified here. */
         padding: var(--btn-padding, 0.5rem 1rem);
     }
+
+    /* Modifier class to set the button to be full-width of the parent/container. */
+    .button--full-width {
+        width: 100%;
+    }
 }
