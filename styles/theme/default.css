@@ -30,14 +30,6 @@
         --btn-border-radius: 0.5rem;    /* 8px */ 
     }
 
-    /*
-     * Example: <button type="button" class="button button--pill">Button</button>
-     */
-    .button--pill {
-        /* Create a smooth rounded border to display as a pill-like button. */
-        --btn-border-radius: 9999px;        
-    }
-
     /* Primary button styling. */
     .button--primary {
         /* Background color. */

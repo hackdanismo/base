@@ -18,8 +18,15 @@
         padding: var(--btn-padding, 0.5rem 1rem);
     }
 
-    /* Modifier class to set the button to be full-width of the parent/container. */
+    /* Example: <button type="button" class="button button--pill">Button</button> */
+    .button--pill {
+        /* Create a smooth rounded border to display as a pill-like button. */
+        border-radius: 9999px;
+    }
+
+    /* Example: <button type="button" class="button button--full-width">Button</button> */
     .button--full-width {
+        /* Modifier class to set the button to be full-width of the parent/container. */
         width: 100%;
     }
 }
