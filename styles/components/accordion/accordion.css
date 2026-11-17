@@ -1,0 +1,87 @@
+/* Accordion container */
+.accordion {
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Accordion items */
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Accordion header */
+.accordion-header {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion-header:hover {
+  background: #f9fafb;
+}
+
+.accordion-header:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+/* Plus icon */
+.accordion-icon {
+  font-size: 24px;
+  font-weight: normal;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate plus icon into an X */
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* Collapsed content */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-content-inner {
+  overflow: hidden;
+}
+
+.accordion-content p {
+  padding: 0 20px 20px;
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Expanded content */
+.accordion-item.active .accordion-content {
+  grid-template-rows: 1fr;
+}
+
+/* Accessibility: reduce animation if requested */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-content,
+  .accordion-icon {
+    transition: none;
+  }
+}

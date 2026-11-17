@@ -1,0 +1,47 @@
+@layer link {
+    /* 
+     * Add class to hyperlinks to apply styling beyond the default.
+     * Example: <a href="#" class="link"> ... </a>
+     */
+    .link {
+        position: relative;
+        display: inline-block;
+        /* Default underline set for links (not strictly needed, but added anyway). */
+        text-decoration: var(--link-underline, underline);
+        /* Ensure the default cursor pointer is applied on hover. */
+        cursor: pointer;
+        /* Set the link color, defaults to inherit unless a color value is passed. */
+        color: var(--link-color, inherit);
+    }
+
+    /* 
+     * Create a link with an underline that slides when hover over.
+     * Add class to hyperlinks to apply styling beyond the default.
+     * Example: <a href="#" class="link link--slide"> ... </a>
+     */
+    .link--slide {
+        /* Remove the text underline as this will be replaced by psuedo class. */
+        text-decoration: none;
+    }
+
+    /* Psuedo class that handles the rendering of the sliding underline. */
+    .link--slide::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        /* Vertical position of the underline relative to the link. */
+        bottom: var(--link-slide-underline-position, 2px);
+        width: 100%;
+        /* Set the thickness of the underline. */
+        height: var(--link-slide-underline-thickness, 1px);
+        background-color: currentColor;
+        transform: scaleX(1);
+        transform-origin: var(--link-slide-origin, left);
+        /* Set the transition. */
+        transition: var(--link-slide-transform, transform 0.35s ease);
+    }
+
+    .link--slide:hover::after {
+        transform: scaleX(0);
+    }
+}

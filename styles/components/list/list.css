@@ -1,0 +1,18 @@
+@layer list {
+    ul {
+        /* Remove default left padding to align the list. */
+        padding-left: 1rem;
+    }
+
+    /* Apply styling for all li elements except the last child in the list. */
+    ul li:not(:last-child) {
+        /* Add margin to provide spacing and retain list layout. */
+        margin-bottom: var(--list-item-gap, 0.5rem);
+    }
+
+    /* List bullets. */
+    ul li::marker {
+        /* Set the bullet color of the list item or fallback to inherit the parent. */
+        color: var(--list-bullet-color, inherit);
+    }
+}

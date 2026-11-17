@@ -6,7 +6,14 @@
  * Released under the MIT Licence: https://opensource.org/licenses/MIT
  */
 
-@layer layout, headings, copy, link, flow;
+@layer font, layout, headings, copy, flow;
+
+@layer font {
+    body {
+        /* Set the default webfont for the page. */
+        font-family: "Darker Grotesque";
+    }
+}
 
 @layer layout { 
     /* 
@@ -73,24 +80,6 @@
     li, figcaption {
         /* Display readable, natural-looking text blocks with line breaks. */
         text-wrap: pretty;
-    }
-}
-
-@layer link {
-    /* Add class to hyperlinks to apply styling beyond the default.
-     * Example: <a href="#" class="link"> ... </a>
-     */
-    .link {
-        /* Default underline set for links (not strictly needed, but added anyway). */
-        text-decoration: underline;
-        /* Ensure the default cursor pointer is applied on hover. */
-        cursor: pointer;
-    }
-
-    /* Link hover state. */
-    .link:hover {
-        /* Removes the underline when the user hovers over a link, as default behavior. */
-        text-decoration: none;
     }
 }
 
