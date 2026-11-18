@@ -1,0 +1,21 @@
+/*
+ * Theme: List
+ * Component: styles/components/list/list.css
+ *
+ * Set the list styling within this stylesheet file.
+ * The values get passed into the list component to apply styling.
+ */
+
+@layer list {
+    /* Target all list items except the last item in the list. */
+    ul li:not(:last-child) {
+        /* Set the vertical space/gap between each list item. */
+        --list-item-gap: 0.5rem;
+    }
+
+    /* Bullet point styling. */
+    ul li::marker {
+        /* Unordered list bullet color. */
+        --list-bullet-color: inherit;
+    }
+}
