@@ -1,0 +1,34 @@
+/*
+ * Theme: Link
+ * Component: styles/components/link/link.css
+ *
+ * Set the link styling within this stylesheet file.
+ * The values get passed into the link component to apply styling.
+ */
+
+@layer link {
+    /* Link default state. */
+    .link {
+        /* Link color, defaults to inherit. */
+        --link-color: inherit;
+        /* Set if the default link should have an underline. */
+        --link-underline: underline;
+    }
+
+    /* Button hover state. */
+    .link:hover {
+        /* Removes the underline when the user hovers over a link, as default behavior. */
+        --link-underline: none;
+    }
+
+    .link--slide::after {
+        /* Vertical position of the underline relative to the link text. */
+        --link-slide-underline-position: 2px;
+        /* Set the thickness of the underline. */
+        --link-slide-underline-thickness: 1px;
+        /* Set if the origin should be left or right. */
+        --link-slide-origin: left;
+        /* Transition of the link slide action. */
+        --link-slide-transform: transform 0.35s ease;
+    }
+}

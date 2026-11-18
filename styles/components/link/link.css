@@ -41,6 +41,7 @@
         transition: var(--link-slide-transform, transform 0.35s ease);
     }
 
+    /* Hover state for link to reduce the width of the underline. */
     .link--slide:hover::after {
         transform: scaleX(0);
     }
