@@ -1,0 +1,16 @@
+/*
+ * Theme: Card Container
+ * Component: styles/components/card-container/card-container.css
+ *
+ * Set the card container styling within this stylesheet file.
+ * The values get passed into the card container component to apply styling.
+ */
+
+@layer card-container {
+    .card-container {
+        /* Spacing between each card. */
+        --card-container-gap: 1rem;
+        /* Minimum width of each card - cards will not shrink below this value. */
+        --card-container-min-width: 16rem;
+    }
+}

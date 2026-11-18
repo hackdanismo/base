@@ -1,11 +1,4 @@
 @layer card-container {
-    :root {
-        /* Spacing between each card. */
-        --card-grid-gap: 1rem;
-        /* Minimum width of each card - cards will not shrink below this value. */
-        --card-min-width: 16rem;
-    }
-
     .card-container {
         /* Turn the container into a grid layout. */
         display: grid;
@@ -20,10 +13,10 @@
         */
         grid-template-columns: repeat(
             auto-fit,
-            minmax(min(100%, var(--card-min-width)), 1fr)
+            minmax(min(100%, var(--card-container-min-width, 16rem)), 1fr)
         );
         /* Adds spacing between each grid item */
-        gap: var(--card-grid-gap);
+        gap: var(--card-container-gap, 1rem);
         /* Makes grid items stretch to fill the row height helpings cards to have equal height. */
         align-items: stretch;
     }

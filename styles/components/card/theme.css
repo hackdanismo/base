@@ -22,20 +22,27 @@
     }
 
     /* Image styling inside of the card. */
-    .card__image {
+    .card-image {
         /* Add spacing below the image before the card content. */
         --card-image-spacing: 1rem;
     }
 
     /* If the card has an image, add the padding to the card content. */
-    .card:has(.card__image) .card__content {
+    .card:has(.card-image) .card-content {
         /* Add internal spacing back to the content area only. */
         --card-content-padding: 1rem;
     }
 
     /* Container for content below the main card content e.g. CTA buttons and links. */
-    .card__cta {
+    .card-cta {
          /* Add vertical spacing between the content and this container. */
         --card-vertical-cta-spacing: 1rem;
+        /*
+         * Horizontal alignment of the CTA buttons within the card. Defaults to right-aligned.
+         * Left: flex-start
+         * Center: center
+         * Right: flex-end (default)
+         */
+        --card-cta-alignment: flex-end;
     }
 }

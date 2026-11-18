@@ -20,7 +20,7 @@
     }
 
     /* Image container. */
-    .card__image {
+    .card-image {
         /* Set the image element to behave like a block-level element. */
         display: block;
         /* The image will span the full width of the container. */
@@ -34,7 +34,7 @@
     }
 
     /* If the card has an image, remove the padding from the card. */
-    .card:has(.card__image) {
+    .card:has(.card-image) {
         /* Remove the padding. */
         padding: 0;
         /* Hide anything that extends beyound the edges of the card. */
@@ -42,13 +42,13 @@
     }
 
     /* If the card has an image, add the padding to the card content. */
-    .card:has(.card__image) .card__content {
+    .card:has(.card-image) .card-content {
         /* Add internal spacing back to the content area only. */
         padding: var(--card-content-padding, 1rem);
     }
 
     /* Container for the card content. */
-    .card__content {
+    .card-content {
         /* Allow content to become shorter than the content's natural height. */
         min-height: 0;
         /* Allow this section to grow and fill the available vertical space. */
@@ -59,8 +59,8 @@
         flex-direction: column;
     }
 
-    /* Target links within the card__content container, except for buttons using the .button class. */
-    .card__content a:not(.button) {
+    /* Target links within the card-content container, except for buttons using the .button class. */
+    .card-content a:not(.button) {
         /* Default underline added to links within cards. */
         text-decoration: underline;
         /* Inherit the color set to the parent element/container. */
@@ -69,14 +69,26 @@
         font: inherit;
     }
 
-    /* Target links within the card__content container for the hover state, except for buttons using the .button class. */
-    .card__content a:not(.button):hover {
+    /* Target links within the card-content container for the hover state, except for buttons using the .button class. */
+    .card-content a:not(.button):hover {
         /* Remove underline from links inside the card on hover. */
         text-decoration: none;
     }
 
     /* Container for content below the main card content e.g. CTA buttons and links. */
-    .card__cta {
+    .card-cta {
+        display: flex;
+        /* Horizontally align the buttons within this container. */
+        align-items: center;
+        /*
+         * Horizontal alignment of the CTA buttons within the card.
+         * Left: flex-start
+         * Center: center
+         * Right: flex-end
+         */
+        justify-content: var(--card-cta-alignment, flex-end);
+        /* Horizontal gap between multiple buttons. */
+        gap: 0.5rem;
         /* Push the content of this container to the bottom of the card. */
         margin-top: auto;
         /* Add vertical spacing between the content and this container. */
