@@ -1,0 +1,41 @@
+/*
+ * Theme: Card
+ * Component: styles/components/card/card.css
+ *
+ * Set the card styling within this stylesheet file.
+ * The values get passed into the card component to apply styling.
+ */
+
+@layer card {
+    /* Example: <div class="card"> ... </div> */
+    .card {
+        /* Set the default background of each card. */
+        --card-bg: #fff;
+        /* Padding for the content inside of the card. */
+        --card-padding: 1rem;
+        /* Set the border for each card. */
+        --card-border: 0;
+        /* Set the box-shadow to each card. Set the border to be 0 if this is used. */
+        --card-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        /* Default border radius for each card. */
+        --card-border-radius: 0.5rem;
+    }
+
+    /* Image styling inside of the card. */
+    .card__image {
+        /* Add spacing below the image before the card content. */
+        --card-image-spacing: 1rem;
+    }
+
+    /* If the card has an image, add the padding to the card content. */
+    .card:has(.card__image) .card__content {
+        /* Add internal spacing back to the content area only. */
+        --card-content-padding: 1rem;
+    }
+
+    /* Container for content below the main card content e.g. CTA buttons and links. */
+    .card__cta {
+         /* Add vertical spacing between the content and this container. */
+        --card-vertical-cta-spacing: 1rem;
+    }
+}
