@@ -175,10 +175,10 @@
                 <div class="container">
                     <h2>Modal</h2>
 
-                    <button type="button" class="button button--pill" id="openModal">Open modal</button>
+                    <button type="button" class="button button--pill js-open-modal">Open modal</button>
 
                     <!-- Modal -->
-                    <dialog class="modal" id="myModal" aria-labelledby="modalTitle">
+                    <dialog class="modal js-modal" aria-labelledby="modalTitle">
 
                             <div class="modal-content flow">
                                 <div class="modal-header">
@@ -186,8 +186,7 @@
 
                                     <button
                                         type="button"
-                                        class="button button--close"
-                                        id="closeModal"
+                                        class="button button--close js-close-modal"
                                         aria-label="Close dialog"
                                     >
                                         &times;
@@ -198,10 +197,10 @@
 
                                 <div class="modal-actions">
                                     <form method="dialog">
-                                        <button type="button" class="button button--curved button--secondary">Cancel</button>
+                                        <button type="button" class="button button--curved button--secondary js-close-modal">Cancel</button>
                                     </form>
 
-                                    <button type="button" class="button button--curved button--primary">Confirm</button>
+                                    <button type="button" class="button button--curved button--primary js-close-modal">Confirm</button>
                                 </div>
                             </div>
 

@@ -1,19 +1,19 @@
 .modal {
-    width: min(100% - 2rem, 440px);
+    width: var(--modal-width, min(100% - 2rem, 440px));
     max-height: calc(100dvh - 2rem);
     margin: auto;
     padding: 0;
-    border: none;
-    border-radius: 0.75rem;
-    background: #fff;
-    color: #222;
+    border: var(--modal-border, none);
+    border-radius: var(--modal-border-radius, 0.75rem);
+    background: var(--modal-bg, #fff);
+    color: var(--modal-color, #222);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 /* The backdrop that site behind the modal when open. */
 .modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
+    background: var(--backdrop-bg, rgba(0, 0, 0, 0.6));
+    backdrop-filter: var(--backdrop-filter, blur(3px));
 }
 
 /* Container holding the modal title and close button. */
@@ -26,14 +26,19 @@
 /* Modal content section. */
 .modal-content {
     display: flex;
+    /* Stack the content vertically. */
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    /* The vertical gap/spacing between different sections inside of the modal. */
+    gap: var(--modal-content-gap, 1rem);
+    /* Padding around the content inside of the modal. */
+    padding: var(--modal-content-padding, 1rem);
 }
 
 /* Modal footer, where CTA buttons and links are usually placed. */
 .modal-actions {
     display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
+    /* Vertical alignment of the CTA buttons. */
+    justify-content: var(--modal-actions-cta-position, flex-end);
+    /* The vertical spacing between each CTA button. */
+    gap: var(--modal-actions-gap, 0.5rem);
 }

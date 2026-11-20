@@ -5,3 +5,45 @@
  * Set the modal styling within this stylesheet file.
  * The values get passed into the modal component to apply styling.
  */
+
+@layer modal {
+    .modal {
+        /* Modal width calculation. */
+        --modal-width: min(100% - 2rem, 440px);
+        /* Background color. */
+        --modal-bg: #fff;
+        /* Text color. */
+        --modal-color: #222;
+        /* Set the border for the modal. */
+        --modal-border: none;
+        /* Set if the modal has a border radius for curved borders to be applied. */
+        --modal-border-radius: 0.75rem;
+    }
+
+    /* The backdrop that site behind the modal when open. */
+    .modal::backdrop {
+        --backdrop-bg: rgba(0, 0, 0, 0.6);
+        --backdrop-filter: blur(3px);
+    }
+
+    /* Modal content section. */
+    .modal-content {
+        /* The vertical gap/spacing between different sections inside of the modal. */
+        --modal-content-gap: 1rem;
+        /* Padding around the content inside of the modal. */
+        --modal-content-padding: 1rem;
+    }
+
+    /* Modal footer, where CTA buttons and links are usually placed. */
+    .modal-actions {
+        /* 
+         * Vertical alignment of the CTA buttons. 
+         * flex-start: left
+         * center: center
+         * flex-end: right
+         */
+        --modal-actions-cta-position: flex-end;
+        /* The vertical spacing between each CTA button. */
+        --modal-actions-gap: 0.5rem;
+    }
+}
