@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="styles/components/card-container/theme.css">
         <link rel="stylesheet" href="styles/components/link/theme.css">
         <link rel="stylesheet" href="styles/components/list/theme.css">
+        <link rel="stylesheet" href="styles/components/modal/theme.css">
         <!-- Components -->
         <link rel="stylesheet" href="styles/components/accordion/accordion.css">
         <link rel="stylesheet" href="styles/components/button/button.css">
@@ -174,43 +175,38 @@
                 <div class="container">
                     <h2>Modal</h2>
 
-                    <button class="button button--pill" type="button" id="openModal">
-                    Open modal
-                    </button>
+                    <button type="button" class="button button--pill" id="openModal">Open modal</button>
 
-                    <dialog id="myModal" aria-labelledby="modalTitle">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h2 id="modalTitle">Modal heading</h2>
+                    <!-- Modal -->
+                    <dialog class="modal" id="myModal" aria-labelledby="modalTitle">
 
-                        <button
-                            type="button"
-                            class="close-button"
-                            id="closeModal"
-                            aria-label="Close dialog"
-                        >
-                            &times;
-                        </button>
-                        </div>
+                            <div class="modal-content flow">
+                                <div class="modal-header">
+                                    <h2 id="modalTitle">Modal heading</h2>
 
-                        <p>
-                        This is an HTML5 modal dialog.
-                        Add any content you like here.
-                        </p>
+                                    <button
+                                        type="button"
+                                        class="button button--close"
+                                        id="closeModal"
+                                        aria-label="Close dialog"
+                                    >
+                                        &times;
+                                    </button>
+                                </div>
 
-                        <div class="modal-actions">
-                        <form method="dialog">
-                            <button type="button" class="button button--curved button--secondary">
-                            Cancel
-                            </button>
-                        </form>
+                                <p>This is an HTML5 modal dialog. Add any content you like here.</p>
 
-                        <button type="button" class="button button--curved button--primary">
-                            Confirm
-                        </button>
-                        </div>
-                    </div>
+                                <div class="modal-actions">
+                                    <form method="dialog">
+                                        <button type="button" class="button button--curved button--secondary">Cancel</button>
+                                    </form>
+
+                                    <button type="button" class="button button--curved button--primary">Confirm</button>
+                                </div>
+                            </div>
+
                     </dialog>
+                    <!-- / Modal -->
 
                 </div>
             </section>

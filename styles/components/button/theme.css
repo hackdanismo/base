@@ -43,6 +43,23 @@
         --btn-color: #1f2937;
     }
 
+    /* 
+     * Close button styling. 
+     * Example: <button type="button" class="button button--close">&times;</button>
+     */
+    .button--close {
+        /* Background color. */
+        --btn-bg: transparent;
+        /* Label/Text color. */
+        --btn-color: #111;
+        /* Hover background color. */
+        --btn-hover: transparent;
+        /* Remove the border. */
+        --btn-border: none;
+        /* Remove any padding from the button. */
+        --btn-padding: 0;
+    }
+
     /* Button hover state. */
     .button:hover {
         /* Set a background color or fallback to the value specified here. */
