@@ -1,87 +1,152 @@
-/* Accordion container */
+/* 
+ * Accordion container.
+ * Selects the main accordion container. 
+ */
 .accordion {
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
+    /* Centers the accordion horizontally within its parent. */
+    margin: 0 auto;
+    /* Sets the accordion background. */
+    background: var(--accordion-bg, #fff);
+    /* Adds a border around the container. */
+    border: var(--accordion-border, 1px solid #ddd);
+    /* Rounds the corners of the accordion. */
+    border-radius: var(--accordion-border-radius, 0.625rem);
+    /* Hides any content that extends beyond the container's edges. */
+    overflow: hidden;
 }
 
-/* Accordion items */
+/* 
+ * Accordion items.
+ * Selects each individual accordion item. 
+ */
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+    /* Adds a light-gray dividing line below each item. */
+    border-bottom: 1px solid #ddd;
 }
 
+/* Selects the last accordion item in its parent. */
 .accordion-item:last-child {
-  border-bottom: none;
+    /* Removes the bottom border from the final item. */
+    border-bottom: none;
 }
 
-/* Accordion header */
+/* 
+ * Accordion header.
+ * Selects the clickable header of each accordion item. 
+ */
 .accordion-header {
-  width: 100%;
-  padding: 20px;
-  background: #fff;
-  border: none;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-
-  text-align: left;
-  font-size: 16px;
-  font-weight: 600;
+    /* Makes the header occupy the full width of its container. */
+    width: 100%;
+    /* Adds internal spacing on all sides. */
+    padding: 20px;
+    /* Sets the header's background color. */
+    background: #fff;
+    /* Removes the header's default border. */
+    border: none;
+    /* Changes the mouse cursor to a pointer to indicate clickability. */
+    cursor: pointer;
+    /* Uses Flexbox to arrange header content horizontally. */
+    display: flex;
+    /* Vertically centers items within the header. */
+    align-items: center;
+    /* Pushes header elements apart, placing them at opposite ends. */
+    justify-content: space-between;
+    /* Adds spacing between the header's flex items. */
+    gap: 1rem;
+    /* Aligns the header text to the left. */
+    text-align: left;
+    /* Sets the header text size. */
+    font-size: 1rem;
+    /* Makes the header font-weight. */
+    font-weight: 600;
 }
 
+/* Applies styling when the mouse hovers over the header. */
 .accordion-header:hover {
-  background: #f9fafb;
+    /* Changes the background on hover. */
+    background: #f9fafb;
 }
 
+/* Applies styling when the header has visible keyboard focus. */
 .accordion-header:focus-visible {
-  outline: 2px solid #2563eb;
-  outline-offset: -2px;
+    /* Adds an outline to indicate keyboard focus. */
+    outline: 2px solid #2563eb;
+    /* Moves the focus outline inward from the element's edge. */
+    outline-offset: -2px;
 }
 
-/* Plus icon */
+/* 
+ * Plus icon.
+ * Selects the plus icon displayed inside the accordion header. 
+ */
 .accordion-icon {
-  font-size: 24px;
-  font-weight: normal;
-  transition: transform 0.3s ease;
+    /* Sets the icon's font size. */
+    font-size: 1.5rem;
+    /* Set the font-weight. */
+    font-weight: normal;
+    /* Smoothly animates rotation changes the period specified. */
+    transition: transform 0.3s ease;
 }
 
-/* Rotate plus icon into an X */
+/* 
+ * Rotate plus icon into an "x".
+ * Selects the icon when its parent accordion item is active. 
+ */
 .accordion-item.active .accordion-icon {
-  transform: rotate(45deg);
+    /* Rotates the plus symbol 45 degrees to make it appear as an X. */
+    transform: rotate(45deg);
 }
 
-/* Collapsed content */
+/* 
+ * Collapsed accordion content
+ * Selects the content panel of each accordion item. 
+ */
 .accordion-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
+    /* Uses CSS Grid to control the content panel's height. */
+    display: grid;
+    /* Collapses the grid row to zero fractional units. */
+    grid-template-rows: 0fr;
+    /* Smoothly animates changes to grid row sizes over 0.3 seconds. */
+    transition: grid-template-rows 0.3s ease;
 }
 
+/* Selects the inner wrapper of an accordion content panel. */
 .accordion-content-inner {
-  overflow: hidden;
+    /* Hides content that extends beyond the wrapper's boundaries. */
+    overflow: hidden;
 }
 
+/* Selects paragraphs inside the accordion content panel. */
 .accordion-content p {
-  padding: 0 20px 20px;
-  margin: 0;
-  color: #555;
-  line-height: 1.6;
+    /* Adds 20px of padding to the left, right and bottom, but none to the top. */
+    padding: 0 1.25rem 1.25rem;
+    /* Removes the paragraph's default external margin. */
+    margin: 0;
+    /* Sets the paragraph text color to dark gray. */
+    color: #555;
+    /* Sets the line height to 1.6 times the text's font size. */
+    line-height: 1.6;
 }
 
-/* Expanded content */
+/* 
+ * Expanded accordion content.
+ * Selects the content panel when its parent accordion item is active. 
+ */
 .accordion-item.active .accordion-content {
-  grid-template-rows: 1fr;
+    /* Expands the grid row to one fractional unit, revealing the content. */
+    grid-template-rows: 1fr;
 }
 
-/* Accessibility: reduce animation if requested */
+/* 
+ * Accessibility: Reduce animations.
+ * Checks whether the user has requested reduced motion in their device settings. 
+ */
 @media (prefers-reduced-motion: reduce) {
-  .accordion-content,
-  .accordion-icon {
-    transition: none;
-  }
+    /* Selects accordion content panels when reduced motion is preferred. */
+    .accordion-content,
+    /* Also selects accordion icons under the same condition. */
+    .accordion-icon {
+        /* Disables transition animations for better accessibility. */
+        transition: none;
+    }
 }

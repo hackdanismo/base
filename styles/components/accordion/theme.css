@@ -1,0 +1,15 @@
+/*
+ * Theme: Accordion
+ * Component: styles/components/accordion/accordion.css
+ *
+ * Set the accordion styling within this stylesheet file.
+ * The values get passed into the accordion component to apply styling.
+ */
+
+@layer accordion {
+    .accordion {
+        --accordion-bg: #fff;
+        --accordion-border: 1px solid #ddd;
+        --accordion-border-radius: 0.625rem;
+    }
+}
