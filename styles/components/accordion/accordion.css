@@ -21,7 +21,7 @@
  */
 .accordion-item {
     /* Adds a light-gray dividing line below each item. */
-    border-bottom: 1px solid #ddd;
+    border-bottom: var(--accordion-item-border-bottom, 1px solid #ddd);
 }
 
 /* Selects the last accordion item in its parent. */
@@ -38,9 +38,9 @@
     /* Makes the header occupy the full width of its container. */
     width: 100%;
     /* Adds internal spacing on all sides. */
-    padding: 20px;
+    padding: var(--accordion-header-padding, 1.25rem);
     /* Sets the header's background color. */
-    background: #fff;
+    background: var(--accordion-header-bg, #fff);
     /* Removes the header's default border. */
     border: none;
     /* Changes the mouse cursor to a pointer to indicate clickability. */
@@ -52,25 +52,25 @@
     /* Pushes header elements apart, placing them at opposite ends. */
     justify-content: space-between;
     /* Adds spacing between the header's flex items. */
-    gap: 1rem;
+    gap: var(--accordion-header-spacing, 1rem);
     /* Aligns the header text to the left. */
     text-align: left;
     /* Sets the header text size. */
-    font-size: 1rem;
+    font-size: var( --accordion-header-font-size, 1rem);
     /* Makes the header font-weight. */
-    font-weight: 600;
+    font-weight: var(--accordion-header-font-weight, 600);
 }
 
 /* Applies styling when the mouse hovers over the header. */
 .accordion-header:hover {
     /* Changes the background on hover. */
-    background: #f9fafb;
+    background: var(--accordion-hover-bg, #f9fafb);
 }
 
 /* Applies styling when the header has visible keyboard focus. */
 .accordion-header:focus-visible {
     /* Adds an outline to indicate keyboard focus. */
-    outline: 2px solid #2563eb;
+    outline: var(--accordion-outline, 2px solid #2563eb);
     /* Moves the focus outline inward from the element's edge. */
     outline-offset: -2px;
 }
@@ -81,7 +81,7 @@
  */
 .accordion-icon {
     /* Sets the icon's font size. */
-    font-size: 1.5rem;
+    font-size: var(--accordion-icon-font-size, 1.5rem);
     /* Set the font-weight. */
     font-weight: normal;
     /* Smoothly animates rotation changes the period specified. */
@@ -118,12 +118,12 @@
 
 /* Selects paragraphs inside the accordion content panel. */
 .accordion-content p {
-    /* Adds 20px of padding to the left, right and bottom, but none to the top. */
-    padding: 0 1.25rem 1.25rem;
+    /* Adds padding to the left, right and bottom, but none to the top. */
+    padding: var(--accordion-content-padding, 0 1.25rem 1.25rem);
     /* Removes the paragraph's default external margin. */
     margin: 0;
-    /* Sets the paragraph text color to dark gray. */
-    color: #555;
+    /* Sets the paragraph text color. */
+    color: var(--accordion-content-color, #555);
     /* Sets the line height to 1.6 times the text's font size. */
     line-height: 1.6;
 }
