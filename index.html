@@ -276,46 +276,85 @@
                 </div>
             </section>
 
+            <!-- Section: Wrapper for the carousel component -->
             <section class="section">
+
+                <!-- Container: Constrains the carousel to the page layout -->
                 <div class="container">
+
+                    <!-- Heading: Identifies the carousel section -->
                     <h2>Carousel</h2>
 
-                    <!-- Carousel -->
-                    <div class="carousel">
-                        <div class="carousel__slides">
-                            <!-- Carousel Slide -->
-                            <div class="carousel__slide">
-                                <img src="https://picsum.photos/id/1018/1600/800" alt="">
+                    <!-- Carousel: Main component wrapper -->
+                    <div class="carousel js-carousel">
+
+                        <!-- Carousel Slides: Flex container for all slides -->
+                        <div class="carousel-slides js-carousel-slides">
+
+                            <!-- Carousel Slide 1: First image slide -->
+                            <div class="carousel-slide js-carousel-slide">
+
+                                <!-- Image: First carousel image -->
+                                <img src="https://picsum.photos/id/1018/1600/800" alt="Landscape with mountains and water">
+
                             </div>
-                            <!-- Carousel Slide -->
-                            <div class="carousel__slide">
-                                <img src="https://picsum.photos/id/1025/1600/800" alt="">
+                            <!-- / END: Carousel Slide 1 -->
+
+                            <!-- Carousel Slide 2: Second image slide -->
+                            <div class="carousel-slide js-carousel-slide">
+
+                                <!-- Image: Second carousel image -->
+                                <img src="https://picsum.photos/id/1025/1600/800" alt="Dog portrait">
+
                             </div>
-                            <!-- Carousel Slide -->
-                            <div class="carousel__slide">
-                                <img src="https://picsum.photos/id/1039/1600/800" alt="">
+                            <!-- / END: Carousel Slide 2 -->
+
+                            <!-- Carousel Slide 3: Third image slide -->
+                            <div class="carousel-slide js-carousel-slide">
+
+                                <!-- Image: Third carousel image -->
+                                <img src="https://picsum.photos/id/1039/1600/800" alt="Nature landscape">
+
                             </div>
-                            <!-- Carousel Slide -->
-                            <div class="carousel__slide">
-                                <img src="https://picsum.photos/id/1043/1600/800" alt="">
+                            <!-- / END: Carousel Slide 3 -->
+
+                            <!-- Carousel Slide 4: Fourth image slide -->
+                            <div class="carousel-slide js-carousel-slide">
+
+                                <!-- Image: Fourth carousel image -->
+                                <img src="https://picsum.photos/id/1043/1600/800" alt="Scenic landscape">
+
                             </div>
+                            <!-- / END: Carousel Slide 4 -->
+
                         </div>
                         <!-- / END: Carousel Slides -->
 
-                        <!-- Carousel Pagination Dots -->
-                        <div class="carousel__dots"></div>
+                        <!-- Carousel Pagination: Container for dynamically generated dots -->
+                        <div class="carousel-dots js-carousel-dots"></div>
+                        <!-- / END: Carousel Pagination -->
 
-                        <!-- Carousel Buttons -->
-                        <div class="carousel__buttons">
-                            <button class="carousel__btn prev">‹</button>
-                            <button class="carousel__btn next">›</button>
+                        <!-- Carousel Buttons: Container for previous and next buttons -->
+                        <div class="carousel-buttons js-carousel-buttons">
+
+                            <!-- Previous Button: Navigates to the previous slide -->
+                            <button class="button button-primary prev js-carousel-prev" type="button" aria-label="Previous slide">‹</button>
+
+                            <!-- Next Button: Navigates to the next slide -->
+                            <button class="button button-primary next js-carousel-next" type="button" aria-label="Next slide">›</button>
+
                         </div>
                         <!-- / END: Carousel Buttons -->
+
                     </div>
                     <!-- / END: Carousel -->
-                    
+
                 </div>
+                <!-- / END: Container -->
+
             </section>
+            <!-- / END: Section -->
+
 
         </main>
         <footer>

@@ -1,49 +1,91 @@
+
+/* Carousel: Main component wrapper */
 .carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    position: relative; /* Establishes a positioning context for child elements */
+    width: 100%; /* Makes the carousel fill its parent container */
+    overflow: hidden; /* Hides slides positioned outside the visible area */
 }
 
-.carousel__slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* Carousel Slides: Horizontal flex container */
+.carousel-slides {
+    display: flex; /* Arranges carousel slides horizontally */
+    transition: transform 0.5s ease-in-out; /* Animates movement between slides */
 }
 
-.carousel__slide {
-    min-width: 100%;
+/* Carousel Slide: Individual slide wrapper */
+.carousel-slide {
+    min-width: 100%; /* Makes each slide occupy the full carousel width */
 }
 
-/* Make the images fill each slide and scale correctly */
-.carousel__slide img {
-    width: 100%;
-    height: 100%;
-    /* Image to fill slide without distortion, maintains aspect ratio */
-    object-fit: cover;
-    display: block;
+/* Carousel Slide Image: Controls image dimensions and scaling */
+.carousel-slide img {
+    width: 100%; /* Makes the image fill the slide horizontally */
+    height: 100%; /* Makes the image fill the slide vertically */
+    object-fit: cover; /* Maintains image proportions while filling the available space */
+    display: block; /* Removes default inline image spacing */
 }
 
-.carousel__dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-  
-.carousel__dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
-.carousel__dot.active {
-    background-color: #333;
+/* Carousel Dots: Container for pagination indicators */
+.carousel-dots {
+    display: flex; /* Arranges pagination dots horizontally */
+    justify-content: center; /* Centers the dots horizontally */
+    align-items: center; /* Aligns the dots vertically */
+    gap: 0.75rem; /* Adds consistent spacing between pagination dots */
+    margin-top: 1rem; /* Adds spacing above the pagination */
 }
 
-.carousel__buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-}  
+/* Carousel Dot: Individual pagination button */
+.carousel-dot {
+    appearance: none; /* Removes default browser button styling */
+    -webkit-appearance: none; /* Removes default button styling in Safari */
+    display: block; /* Ensures consistent button dimensions */
+    flex: 0 0 auto; /* Prevents the dots from shrinking or stretching */
+    width: 0.75rem; /* Sets the dot width to the equivalent of 12px */
+    height: 0.75rem; /* Sets the dot height to the equivalent of 12px */
+    padding: 0; /* Removes default button padding */
+    border: 0; /* Removes default button borders */
+    border-radius: 50%; /* Creates a perfectly circular pagination dot */
+    background-color: #d1d5db; /* Sets the default inactive dot colour */
+    box-shadow: none; /* Removes any inherited button shadow */
+    cursor: pointer; /* Displays a pointer cursor when hovering */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smoothly animates colour and size changes */
+}
+
+/* Carousel Dot Hover: Provides feedback when hovering over a dot */
+.carousel-dot:hover {
+    background-color: #94a3b8; /* Darkens inactive dots on hover */
+}
+
+/* Carousel Dot Active: Highlights the currently selected slide */
+.carousel-dot.active {
+    background-color: #2563eb; /* Matches the blue carousel navigation buttons */
+    transform: scale(1.15); /* Slightly enlarges the active pagination dot */
+}
+
+/* Carousel Dot Focus: Improves keyboard navigation accessibility */
+.carousel-dot:focus-visible {
+    outline: 0.125rem solid #2563eb; /* Adds a visible keyboard focus indicator */
+    outline-offset: 0.25rem; /* Creates spacing between the dot and its outline */
+}
+
+/* Carousel Buttons: Navigation button container */
+.carousel-buttons {
+    display: flex; /* Arranges navigation buttons horizontally */
+    gap: 1rem; /* Adds spacing between navigation buttons */
+    justify-content: flex-end; /* Aligns navigation buttons to the right */
+}
+
+/* Reduced Motion: Respects user accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Carousel Slides: Disables slide transition animations */
+    .carousel-slides {
+        transition: none; /* Removes animated slide movement */
+    }
+
+    /* Carousel Dot: Disables pagination transition animations */
+    .carousel-dot {
+        transition: none; /* Removes animated dot state changes */
+    }
+
+}
