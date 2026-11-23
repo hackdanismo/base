@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "css:build": "bun run scripts/build-css.js",
-    "css:dev": "bun build ./styles/styles.css --outdir ./dist --target browser"
+    "css:dev": "bun build ./styles/styles.css --outdir ./dist --target browser --watch",
+    "js:build": "bun build ./scripts/build-scripts.js --outfile ./dist/scripts.min.js --minify --target browser",
+    "js:dev": "bun build ./scripts/build-scripts.js --outfile ./dist/scripts.js --target browser --watch",
+    "build": "bun run css:build && bun run js:build"
   },
   "repository": {
     "type": "git",
