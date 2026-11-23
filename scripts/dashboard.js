@@ -16,8 +16,22 @@ const formatHTML = (element) => {
     clone.querySelectorAll('.js-accordion-header').forEach((node) => node.setAttribute('aria-expanded', 'false'));
     clone.querySelectorAll('.js-accordion-content').forEach((node) => node.setAttribute('inert', ''));
 
-    // Return the original component markup without leading or trailing whitespace.
-    return clone.innerHTML.trim();
+    // Normalize line endings and remove surrounding whitespace.
+    const html = clone.innerHTML.replace(/\r\n?/g, '\n').trim();
+    const lines = html.split('\n');
+
+    // The first line starts at column zero after trim(), so exclude it
+    // when finding the common indentation of subsequent lines.
+    const indents = lines.slice(1)
+        .filter((line) => line.trim() !== '')
+        .map((line) => line.match(/^[\t ]*/)[0].length);
+
+    const commonIndent = indents.length ? Math.min(...indents) : 0;
+
+    // Preserve nested indentation while aligning the outer HTML correctly.
+    return lines
+        .map((line, index) => index === 0 ? line : line.slice(commonIndent))
+        .join('\n');
 };
 
 /* Load component source files; run through a local server so fetch can read them. */
@@ -302,7 +316,7 @@ const sidebar = document.querySelector('.dashboard-sidebar');
 // Menu Click: Open or close the sidebar when the toggle is clicked.
 menuToggle?.addEventListener('click', () => {
 
-    // Toggle Sidebar: Add or remove the open state.
+    // Toggle Sidebar: Add or close the sidebar.
     const open = sidebar.classList.toggle('is-open');
 
     // Accessibility State: Update whether the menu is expanded.
