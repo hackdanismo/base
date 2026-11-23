@@ -1,364 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="TBC.">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse and copy reusable UI components.">
+    <title>Component Library | Base</title>
 
-        <title>Base</title>
+    <!-- Existing project styles: keep the same paths and order. -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components/accordion/theme.css">
+    <link rel="stylesheet" href="styles/components/button/theme.css">
+    <link rel="stylesheet" href="styles/components/card/theme.css">
+    <link rel="stylesheet" href="styles/components/card-container/theme.css">
+    <link rel="stylesheet" href="styles/components/link/theme.css">
+    <link rel="stylesheet" href="styles/components/list/theme.css">
+    <link rel="stylesheet" href="styles/components/modal/theme.css">
+    <link rel="stylesheet" href="styles/components/accordion/accordion.css">
+    <link rel="stylesheet" href="styles/components/button/button.css">
+    <link rel="stylesheet" href="styles/components/card-container/card-container.css">
+    <link rel="stylesheet" href="styles/components/card/card.css">
+    <link rel="stylesheet" href="styles/components/carousel/carousel.css">
+    <link rel="stylesheet" href="styles/components/link/link.css">
+    <link rel="stylesheet" href="styles/components/list/list.css">
+    <link rel="stylesheet" href="styles/components/modal/modal.css">
+    <!-- Load dashboard styles last so they can override layout defaults. -->
+    <link rel="stylesheet" href="styles/dashboard.css">
 
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/grid.css">
-        <link rel="stylesheet" href="styles/base.css">
-        <!-- Theme -->
-        <link rel="stylesheet" href="styles/components/accordion/theme.css">
-        <link rel="stylesheet" href="styles/components/button/theme.css">
-        <link rel="stylesheet" href="styles/components/card/theme.css">
-        <link rel="stylesheet" href="styles/components/card-container/theme.css">
-        <link rel="stylesheet" href="styles/components/link/theme.css">
-        <link rel="stylesheet" href="styles/components/list/theme.css">
-        <link rel="stylesheet" href="styles/components/modal/theme.css">
-        <!-- Components -->
-        <link rel="stylesheet" href="styles/components/accordion/accordion.css">
-        <link rel="stylesheet" href="styles/components/button/button.css">
-        <link rel="stylesheet" href="styles/components/card-container/card-container.css">
-        <link rel="stylesheet" href="styles/components/card/card.css">
-        <link rel="stylesheet" href="styles/components/carousel/carousel.css">
-        <link rel="stylesheet" href="styles/components/link/link.css">
-        <link rel="stylesheet" href="styles/components/list/list.css">
-        <link rel="stylesheet" href="styles/components/modal/modal.css">
+    <!-- Existing component behaviour. -->
+    <script src="scripts/components/accordion/accordion.js" defer></script>
+    <script src="scripts/components/carousel/carousel.js" defer></script>
+    <script src="scripts/components/modal/modal.js" defer></script>
+    <!-- Dashboard behaviour: tabs, code loading and copy buttons. -->
+    <script src="scripts/dashboard.js" defer></script>
+</head>
+<body class="dashboard-body">
+    <div class="dashboard">
+        <!-- Persistent navigation sidebar. -->
+        <aside class="dashboard-sidebar" id="component-navigation" aria-label="Component navigation">
+            <a class="dashboard-brand" href="#top"><span class="dashboard-brand-mark">◈</span> Base UI <span class="dashboard-brand-subtitle">Components</span></a>
+            <p class="dashboard-nav-label">COMPONENTS</p>
+            <nav class="dashboard-nav" aria-label="Components">
+                <a href="#buttons">Buttons</a>
+                <a href="#links">Links</a>
+                <a href="#cards">Cards</a>
+                <a href="#image-cards">Image cards</a>
+                <a href="#typography">Typography</a>
+                <a href="#lists">Lists</a>
+                <a href="#images">Images</a>
+                <a href="#modals">Modals</a>
+                <a href="#accordions">Accordions</a>
+                <a href="#carousels">Carousels</a>
+            </nav>
+            <div class="dashboard-sidebar-footer">HTML · CSS · JavaScript</div>
+        </aside>
 
-        <script src="scripts/components/accordion/accordion.js" defer></script>
-        <script src="scripts/components/carousel/carousel.js" defer></script>
-        <script src="scripts/components/modal/modal.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <!-- Web page header. -->
-        </header>
-        <main role="main">
-            <!-- Page content. -->
-            <section class="section">
-                <div class="container">
-                    <h1>Page content</h1>
+        <div class="dashboard-main-shell" id="top">
+            <header class="dashboard-topbar">
+                <button class="dashboard-menu-toggle js-menu-toggle" type="button" aria-controls="component-navigation" aria-expanded="false">☰ <span class="sr-only">Toggle navigation</span></button>
+                <span class="dashboard-breadcrumb">Library <span aria-hidden="true">/</span> Components</span>
+                <span class="dashboard-topbar-tag">Vanilla JS</span>
+            </header>
+
+            <main class="dashboard-content">
+                <div class="dashboard-intro">
+                    <span class="dashboard-eyebrow">DESIGN SYSTEM</span>
+                    <h1>Components</h1>
+                    <p>Preview reusable UI patterns, inspect their source, and copy code into your project.</p>
                 </div>
-            </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2>Button</h2>
-
-                    <button type="button" class="button">Button</button>
-                    <button type="button" class="button button--primary">Button Primary</button>
-                    <button type="button" class="button button--secondary">Button Secondary</button>
-                    <button type="button" class="button button--pill">Button Pill</button>
-                    <button type="button" class="button button--curved">Button Curved</button>
-                    <button type="button" class="button button--full-width">Button Full Width</button>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <h2>Link</h2>
-
-                    <a href="#" class="link">Link example</a>
-                    <a href="#" class="link link--slide">Slide Underline Link example</a>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <h2>Card</h2>
-
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-content">
-                                <p>This is a card.</p>
-                                <p>This is a card.</p>
-                                <p>This is a card.</p>
-                                <p>This is a card.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                This is a second card.
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-content">
-                                This is a third card.
-                            </div>
+                <!-- Each component uses the same shell; content inside .js-preview is the copyable HTML. -->
+                <section class="component-section js-component" id="buttons" data-css="styles/components/button/theme.css|styles/components/button/button.css">
+                    <div class="component-heading"><div><h2>Buttons</h2><p>Primary actions, secondary actions and button variants.</p></div><span class="component-type">Actions</span></div>
+                    <div class="component-showcase">
+                        <div class="component-preview js-preview">
+                            <button type="button" class="button">Button</button>
+                            <button type="button" class="button button--primary">Button Primary</button>
+                            <button type="button" class="button button--secondary">Button Secondary</button>
+                            <button type="button" class="button button--pill">Button Pill</button>
+                            <button type="button" class="button button--curved">Button Curved</button>
+                            <button type="button" class="button button--full-width">Button Full Width</button>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2>Card</h2>
+                <section class="component-section js-component" id="links" data-css="styles/components/link/theme.css|styles/components/link/link.css">
+                    <div class="component-heading"><div><h2>Links</h2><p>Text links and hover treatments.</p></div><span class="component-type">Navigation</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <a href="#links" class="link">Link example</a>
+                        <a href="#links" class="link link--slide">Slide Underline Link example</a>
+                    </div></div>
+                </section>
 
-                    <div class="card-container">
-                        <a href="#" target="_blank" rel="nopener noreferrer">
-                            <div class="card">
-                                <img class="card-image" src="https://picsum.photos/200" alt="Description of image 1.">
-                                <div class="card-content">
-                                    <div class="flow">
-                                        <p>This is a card.</p>
-                                        <p>This is a card.</p>
-                                        <p>This is a card.</p>
-                                        <p>This is a card.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card">
-                            <img class="card-image" src="https://picsum.photos/200" alt="Description of image 1.">
-                            <div class="card-content">
-                                <div class="flow">
-                                    This is a second card. <a href="#" target="_blank" rel="noopener noreferrer">Link example</a>.
-                                </div>
-                                <div class="card-cta">
-                                    <a href="#" role="button" class="button button--pill u-full-width">Read more</a>
-                                </div>
-                            </div>
+                <section class="component-section js-component" id="cards" data-css="styles/components/card/theme.css|styles/components/card/card.css|styles/components/card-container/theme.css|styles/components/card-container/card-container.css">
+                    <div class="component-heading"><div><h2>Cards</h2><p>Simple content cards in a responsive layout.</p></div><span class="component-type">Content</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <div class="card-container">
+                            <div class="card"><div class="card-content"><p>This is a card.</p><p>This is a card.</p><p>This is a card.</p><p>This is a card.</p></div></div>
+                            <div class="card"><div class="card-content">This is a second card.</div></div>
+                            <div class="card"><div class="card-content">This is a third card.</div></div>
                         </div>
-                        <div class="card">
-                            <img class="card-image" src="https://picsum.photos/200" alt="Description of image 1.">
-                            <div class="card-content">
-                                <div class="flow">
-                                    This is a third card.
-                                </div>
-                                <div class="card-cta u-flex-right">
-                                    <a href="#" role="button" class="button button--pill">Read more</a>
-                                    <a href="#" role="button" class="button button--pill">Read more</a>
-                                </div>
-                            </div>
+                    </div></div>
+                </section>
+
+                <section class="component-section js-component" id="image-cards" data-css="styles/components/card/theme.css|styles/components/card/card.css|styles/components/card-container/theme.css|styles/components/card-container/card-container.css|styles/components/button/theme.css|styles/components/button/button.css">
+                    <div class="component-heading"><div><h2>Image cards</h2><p>Cards with images, links and calls to action.</p></div><span class="component-type">Content</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <div class="card-container">
+                            <a href="#image-cards"><div class="card"><img class="card-image" src="https://picsum.photos/200" alt="Example photograph"><div class="card-content"><div class="flow"><p>This is a card.</p><p>This is a card.</p><p>This is a card.</p><p>This is a card.</p></div></div></div></a>
+                            <div class="card"><img class="card-image" src="https://picsum.photos/200" alt="Example photograph"><div class="card-content"><div class="flow">This is a second card. <a href="#image-cards">Link example</a>.</div><div class="card-cta"><a href="#image-cards" class="button button--pill u-full-width">Read more</a></div></div></div>
+                            <div class="card"><img class="card-image" src="https://picsum.photos/200" alt="Example photograph"><div class="card-content"><div class="flow">This is a third card.</div><div class="card-cta u-flex-right"><a href="#image-cards" class="button button--pill">Read more</a><a href="#image-cards" class="button button--pill">Read more</a></div></div></div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </div></div>
+                </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2>Heading</h2>
+                <section class="component-section js-component" id="typography" data-css="styles/base.css">
+                    <div class="component-heading"><div><h2>Typography</h2><p>Headings and vertical text flow.</p></div><span class="component-type">Foundations</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <div class="flow"><h3>Flow Example</h3><p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p><p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p></div>
+                    </div></div>
+                </section>
 
-                    <div class="flow">
-                        <h3>Flow Example</h3>
+                <section class="component-section js-component" id="lists" data-css="styles/components/list/theme.css|styles/components/list/list.css">
+                    <div class="component-heading"><div><h2>Lists</h2><p>Standard unordered lists.</p></div><span class="component-type">Content</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <ul><li>List item one.</li><li>List item two.</li><li>List item three.</li><li>List item four.</li></ul>
+                    </div></div>
+                </section>
 
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                    </div>
-                </div>
-            </section>
+                <section class="component-section js-component" id="images" data-css="styles/base.css">
+                    <div class="component-heading"><div><h2>Images</h2><p>A simple responsive image example.</p></div><span class="component-type">Media</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <img loading="lazy" src="https://picsum.photos/200/300" width="200" height="300" alt="Example image">
+                    </div></div>
+                </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2>List</h2>
+                <section class="component-section js-component" id="modals" data-css="styles/components/modal/theme.css|styles/components/modal/modal.css" data-js="scripts/components/modal/modal.js">
+                    <div class="component-heading"><div><h2>Modal</h2><p>Native dialog opened with a trigger button.</p></div><span class="component-type">Overlay</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <button type="button" class="button button--pill js-open-modal">Open modal</button>
+                        <dialog class="modal js-modal" aria-labelledby="modalTitle"><div class="modal-content flow"><div class="modal-header"><h2 id="modalTitle">Modal heading</h2><button type="button" class="button button--close js-close-modal" aria-label="Close dialog">&times;</button></div><p>This is an HTML5 modal dialog. Add any content you like here.</p><div class="modal-actions"><form method="dialog"><button type="button" class="button button--curved button--secondary js-close-modal">Cancel</button></form><button type="button" class="button button--curved button--primary js-close-modal">Confirm</button></div></div></dialog>
+                    </div></div>
+                </section>
 
-                    <ul>
-                        <li>List item one.</li>
-                        <li>List item two.</li>
-                        <li>List item three.</li>
-                        <li>List item four.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <h2>Image</h2>
-
-                    <img loading="lazy" src="https://picsum.photos/200/300" width="200" height="300" alt="Example image.">
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <h2>Modal</h2>
-
-                    <button type="button" class="button button--pill js-open-modal">Open modal</button>
-
-                    <!-- Modal -->
-                    <dialog class="modal js-modal" aria-labelledby="modalTitle">
-
-                            <div class="modal-content flow">
-                                <div class="modal-header">
-                                    <h2 id="modalTitle">Modal heading</h2>
-
-                                    <button
-                                        type="button"
-                                        class="button button--close js-close-modal"
-                                        aria-label="Close dialog"
-                                    >
-                                        &times;
-                                    </button>
-                                </div>
-
-                                <p>This is an HTML5 modal dialog. Add any content you like here.</p>
-
-                                <div class="modal-actions">
-                                    <form method="dialog">
-                                        <button type="button" class="button button--curved button--secondary js-close-modal">Cancel</button>
-                                    </form>
-
-                                    <button type="button" class="button button--curved button--primary js-close-modal">Confirm</button>
-                                </div>
-                            </div>
-
-                    </dialog>
-                    <!-- / Modal -->
-
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container">
-                    <h2>Accordion</h2>
-
-                    <div class="accordion js-accordion">
-
-                        <div class="accordion-item js-accordion-item">
-                            <button class="accordion-header js-accordion-header"
-                                    aria-expanded="false"
-                                    aria-controls="content-1">
-                                What is an accordion?
-                                <span class="accordion-icon" aria-hidden="true">+</span>
-                            </button>
-
-                            <div class="accordion-content js-accordion-content" id="content-1" inert>
-                                <div class="accordion-content-inner">
-                                <p>
-                                    An accordion is a component that allows
-                                    users to expand and collapse content.
-                                </p>
-                                </div>
-                            </div>
+                <section class="component-section js-component" id="accordions" data-css="styles/components/accordion/theme.css|styles/components/accordion/accordion.css" data-js="scripts/components/accordion/accordion.js">
+                    <div class="component-heading"><div><h2>Accordion</h2><p>Expandable panels that reveal additional content.</p></div><span class="component-type">Disclosure</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <div class="accordion js-accordion">
+                            <div class="accordion-item js-accordion-item"><button type="button" class="accordion-header js-accordion-header" aria-expanded="false" aria-controls="content-1">What is an accordion? <span class="accordion-icon" aria-hidden="true">+</span></button><div class="accordion-content js-accordion-content" id="content-1" inert><div class="accordion-content-inner"><p>An accordion is a component that allows users to expand and collapse content.</p></div></div></div>
+                            <div class="accordion-item js-accordion-item"><button type="button" class="accordion-header js-accordion-header" aria-expanded="false" aria-controls="content-2">How does it work? <span class="accordion-icon" aria-hidden="true">+</span></button><div class="accordion-content js-accordion-content" id="content-2" inert><div class="accordion-content-inner"><p>Click on a heading to reveal its content. Click again to close it.</p></div></div></div>
+                            <div class="accordion-item js-accordion-item"><button type="button" class="accordion-header js-accordion-header" aria-expanded="false" aria-controls="content-3">Can I customize it? <span class="accordion-icon" aria-hidden="true">+</span></button><div class="accordion-content js-accordion-content" id="content-3" inert><div class="accordion-content-inner"><p>Yes! You can customize the colors, spacing, typography, and animations.</p></div></div></div>
                         </div>
+                    </div></div>
+                </section>
 
-                        <div class="accordion-item js-accordion-item">
-                            <button class="accordion-header js-accordion-header"
-                                    aria-expanded="false"
-                                    aria-controls="content-2">
-                                How does it work?
-                                <span class="accordion-icon" aria-hidden="true">+</span>
-                            </button>
-
-                            <div class="accordion-content js-accordion-content" id="content-2" inert>
-                                <div class="accordion-content-inner">
-                                <p>
-                                    Click on a heading to reveal its content.
-                                    Click again to close it.
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item js-accordion-item">
-                            <button class="accordion-header js-accordion-header"
-                                    aria-expanded="false"
-                                    aria-controls="content-3">
-                                Can I customize it?
-                                <span class="accordion-icon" aria-hidden="true">+</span>
-                            </button>
-
-                            <div class="accordion-content js-accordion-content" id="content-3" inert>
-                                <div class="accordion-content-inner">
-                                <p>
-                                    Yes! You can customize the colors,
-                                    spacing, typography, and animations.
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Section: Wrapper for the carousel component -->
-            <section class="section">
-
-                <!-- Container: Constrains the carousel to the page layout -->
-                <div class="container">
-
-                    <!-- Heading: Identifies the carousel section -->
-                    <h2>Carousel</h2>
-
-                    <!-- Carousel: Main component wrapper -->
-                    <div class="carousel js-carousel">
-
-                        <!-- Carousel Slides: Flex container for all slides -->
-                        <div class="carousel-slides js-carousel-slides">
-
-                            <!-- Carousel Slide 1: First image slide -->
-                            <div class="carousel-slide js-carousel-slide">
-
-                                <!-- Image: First carousel image -->
-                                <img src="https://picsum.photos/id/1018/1600/800" alt="Landscape with mountains and water">
-
-                            </div>
-                            <!-- / END: Carousel Slide 1 -->
-
-                            <!-- Carousel Slide 2: Second image slide -->
-                            <div class="carousel-slide js-carousel-slide">
-
-                                <!-- Image: Second carousel image -->
-                                <img src="https://picsum.photos/id/1025/1600/800" alt="Dog portrait">
-
-                            </div>
-                            <!-- / END: Carousel Slide 2 -->
-
-                            <!-- Carousel Slide 3: Third image slide -->
-                            <div class="carousel-slide js-carousel-slide">
-
-                                <!-- Image: Third carousel image -->
-                                <img src="https://picsum.photos/id/1039/1600/800" alt="Nature landscape">
-
-                            </div>
-                            <!-- / END: Carousel Slide 3 -->
-
-                            <!-- Carousel Slide 4: Fourth image slide -->
-                            <div class="carousel-slide js-carousel-slide">
-
-                                <!-- Image: Fourth carousel image -->
-                                <img src="https://picsum.photos/id/1043/1600/800" alt="Scenic landscape">
-
-                            </div>
-                            <!-- / END: Carousel Slide 4 -->
-
-                        </div>
-                        <!-- / END: Carousel Slides -->
-
-                        <!-- Carousel Pagination: Container for dynamically generated dots -->
-                        <div class="carousel-dots js-carousel-dots"></div>
-                        <!-- / END: Carousel Pagination -->
-
-                        <!-- Carousel Buttons: Container for previous and next buttons -->
-                        <div class="carousel-buttons js-carousel-buttons">
-
-                            <!-- Previous Button: Navigates to the previous slide -->
-                            <button class="button button-primary prev js-carousel-prev" type="button" aria-label="Previous slide">‹</button>
-
-                            <!-- Next Button: Navigates to the next slide -->
-                            <button class="button button-primary next js-carousel-next" type="button" aria-label="Next slide">›</button>
-
-                        </div>
-                        <!-- / END: Carousel Buttons -->
-
-                    </div>
-                    <!-- / END: Carousel -->
-
-                </div>
-                <!-- / END: Container -->
-
-            </section>
-            <!-- / END: Section -->
-
-
-        </main>
-        <footer>
-            <!-- Web page footer. -->
-        </footer>
-    </body>
+                <section class="component-section js-component" id="carousels" data-css="styles/components/carousel/carousel.css" data-js="scripts/components/carousel/carousel.js">
+                    <div class="component-heading"><div><h2>Carousel</h2><p>Image slideshow with pagination and navigation.</p></div><span class="component-type">Media</span></div>
+                    <div class="component-showcase"><div class="component-preview js-preview">
+                        <div class="carousel js-carousel"><div class="carousel-slides js-carousel-slides">
+                            <div class="carousel-slide js-carousel-slide"><img src="https://picsum.photos/id/1018/1600/800" alt="Landscape with mountains and water"></div>
+                            <div class="carousel-slide js-carousel-slide"><img src="https://picsum.photos/id/1025/1600/800" alt="Dog portrait"></div>
+                            <div class="carousel-slide js-carousel-slide"><img src="https://picsum.photos/id/1039/1600/800" alt="Nature landscape"></div>
+                            <div class="carousel-slide js-carousel-slide"><img src="https://picsum.photos/id/1043/1600/800" alt="Scenic landscape"></div>
+                        </div><div class="carousel-dots js-carousel-dots"></div><div class="carousel-buttons js-carousel-buttons"><button class="button button-primary prev js-carousel-prev" type="button" aria-label="Previous slide">‹</button><button class="button button-primary next js-carousel-next" type="button" aria-label="Next slide">›</button></div></div>
+                    </div></div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
 </html>
