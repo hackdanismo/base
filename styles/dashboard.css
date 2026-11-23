@@ -69,7 +69,7 @@
 /* Preview: Gives components breathing room without changing their CSS. */
 .component-preview { padding: clamp(1.25rem, 3vw, 2.25rem); min-width: 0; }
 /* Direct-child spacing: Keeps adjacent examples readable. */
-.component-preview > :not(:last-child) { margin-right: 0.625rem; }
+/****.component-preview > :not(:last-child) { margin-right: 0.625rem; }***/
 /* Carousel preview: Avoids extra width constraints on media. */
 #carousels .component-preview { padding: 1.25rem; }
 /* Code toolbar: Holds language tabs and copy action. */
