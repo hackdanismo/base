@@ -10,7 +10,7 @@
     /* Example: <button type="button" class="button">Button</button> */
     .button {
         /* Set vertical and horizontal padding for the default button. */
-        --btn-padding: 0.5rem 1rem;
+        --btn-padding: 1rem 1.5rem;
         /* Transition is applied on hover. */
         --btn-transition: all 0.2s ease;
         /* Remove the border by default. Change this value if a border is needed. */
