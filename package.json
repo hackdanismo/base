@@ -1,0 +1,22 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "bun run scripts/build-css.js",
+    "css:dev": "bun build ./styles/styles.css --outdir ./dist --target browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackdanismo/base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hackdanismo/base/issues"
+  },
+  "homepage": "https://github.com/hackdanismo/base#readme"
+}
